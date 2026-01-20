@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/login.css">
+    <title>Cadastro</title>
+</head>
+
+    <body>
+        <div class="border">
+            <div class="format-form">
+                <div class="style-form">
+                    <img id="logo" src="IMG/logo-sfundo.png">
+                        <h1 id="title">Faça seu login</h1>
+                    <form action="script/valida_login.php" method="post" id="form">
+                        <label for="email">EMAIL:</label>
+                            <input type="email" name="email" id="email">
+
+                    
+                        <label for="senha">SENHA:</label>
+                        <div class="senha-container">
+                            <input type="password" name="senha" id="senha">
+                            <button type="button" class="toggle-senha" onclick="mostrarSenha()">👀</button>
+                        </div>
+
+
+
+                            <button id="enviar" type="submit">Enviar</button>
+                            
+                        <div class="voltar-cadastro">
+                            <p>Não tem conta?</p>
+                                <a href="cadaster.html">Cadastre-se</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <script src="script.js"></script>
+
+        <script>
+            function mostrarSenha() {
+                const campoSenha = document.getElementById("senha");
+                campoSenha.type = campoSenha.type === "password" ? "text" : "password";
+                }
+        </script>
+    </body>
+</html>
